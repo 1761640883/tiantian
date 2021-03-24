@@ -2,7 +2,6 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import home from './home'
 import author from './Author'
-import join from './Join'
 import introduced from './introduced'
 
 Vue.use(VueRouter)
@@ -10,8 +9,12 @@ Vue.use(VueRouter)
 const routes = [
   author,
   home,
-  join,
   introduced,
+  {
+    path: '/detail/:id',
+    component: ()=>import('@/views/detail'),
+    props: true
+  },
   {
     path: '',
     redirect: 'home'
@@ -19,7 +22,6 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  mode: 'history',
   base: process.env.BASE_URL,
   routes
 })

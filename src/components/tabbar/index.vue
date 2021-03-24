@@ -1,6 +1,6 @@
 <template>
     <div id="navigation" class="container">
-        <div class="l">
+        <div class="l" @click="$router.push('/home')">
             天天<span>tiantian</span>
         </div>
         <div class="r">
@@ -8,7 +8,6 @@
                 <router-link tag="li" to="/home">首页</router-link>
                 <router-link tag="li" to="/introduced">关于我们</router-link>
                 <router-link tag="li" to="/author">作者入口</router-link>
-                <router-link tag="li" to="/join">加入我们</router-link>
             </ul>
         </div>
     </div>
@@ -28,7 +27,7 @@ export default {
     }
     ul{
         li{
-            padding: 0 30px;float: left;font: 16px/60px '微软雅黑';
+            padding: 0 30px;float: left;font: 16px/60px '微软雅黑';cursor: pointer;
             &:last-child{
                 padding-right: 0;
             }
