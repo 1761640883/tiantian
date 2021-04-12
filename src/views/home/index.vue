@@ -380,6 +380,7 @@ export default {
                 justify-content: space-between;
                 img{
                     width: 130px;
+                    height: auto;
                     margin-right: 240px;
                 }
                 ul{
